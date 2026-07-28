@@ -10,13 +10,13 @@
 ## Observed system state
 
 || **AdGuard HA playbook vs runtime discrepancy (2026-07-21 15:07 CEST)**
-||- User asserts per AdGuard HA playbook: CT 252 is primary on `.120`, CT 253 is backup on `.51`.
+||- User asserts per AdGuard HA playbook: CT 200 is primary on `.120`, CT 201 is backup on `.51`.
 ||- Direct Proxmox API verification via `root@pam!monitoring` token on `.120`:
   - CT 100 `adguardhome-primary` is **running**.
-  - CT 252 `adguard-252` exists but is **stopped**.
-  - CT 253 does **not exist** on `.120`.
+  - CT 200 `adguard-200` exists but is **stopped**.
+  - CT 201 does **not exist** on `.120`.
 ||- Direct Proxmox API verification on `.51`:
-  - CT 252 and CT 253 do **not exist** on `.51`.
+  - CT 200 and CT 201 do **not exist** on `.51`.
   - CT 102 `adguardhome-backup` is running.
 ||- **Finding:** Either the playbook IDs are stale, the LXCs were recreated with different IDs, or HA is operating on CT 100 + CT 102 despite the playbook naming convention. This needs operator confirmation before any failover/repair plan is updated.
 ||- **Resolved 2026-07-23:** Legacy bare-metal/AdGuard Docker stack on `.252`/`.253` fully retired. New active HA pair is `.200`/`.201` direct host install on `.120` PVE with keepalived VIP `192.168.10.254`.

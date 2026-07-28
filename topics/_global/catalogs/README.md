@@ -67,7 +67,7 @@ Fleet dashboard of topics, agents, skills, loops.
 >   - sysadmin README/continuity/queue updated with current blocker state; no roster change; no new topics, agents, skills, or loops.
 
 > [2026-07-23 06:18 CEST] context-factory tick completed
->   - Sysadmin session tail surfaces two additional Ad blocker findings on `.252`/`.253`: bcrypt hash mismatch on `.252` AdGuard config (401 on `/control/status`), and `.253` DNS timeout from outside (`192.168.10.253#53` UDP/TCP). Both appended to sysadmin continuity; queue item #4 updated with current blocker state.
+>   - Sysadmin session tail surfaces two additional Ad blocker findings on `.252`/`.253`: bcrypt hash mismatch on `.252` AdGuard config (401 on `/control/status`), and `.253` DNS timeout from outside (`192.168.10.251#53` UDP/TCP). Both appended to sysadmin continuity; queue item #4 updated with current blocker state.
 
 > [2026-07-22 18:59 CEST] context-factory tick completed
 >   - Sysadmin Discord session tail surfaces AdGuard HA `.253` compose install blocker: `docker.io` installs but compose plugin absent, `python3-pip` missing, `apt-get install` hangs intermittently; user executing manual install interactively.
@@ -101,7 +101,7 @@ Fleet dashboard of topics, agents, skills, loops.
 
 > [2026-07-21 22:17 CEST] context-factory tick completed
 > [2026-07-21 15:07 CEST] context-factory tick completed
->   - AdGuard HA playbook vs runtime discrepancy surfaced from Discord sysadmin session `20260709_155620_f1fe9f90`: user asserts CT 252 on `.120` + CT 253 on `.51`; live Proxmox API shows CT 100 `adguardhome-primary` running on `.120`, CT 102 `adguardhome-backup` on `.51`, CT 252 stopped on `.120`, CT 253 absent.
+>   - AdGuard HA playbook vs runtime discrepancy surfaced from Discord sysadmin session `20260709_155620_f1fe9f90`: user asserts CT 200 on `.120` + CT 201 on `.51`; live Proxmox API shows CT 100 `adguardhome-primary` running on `.120`, CT 102 `adguardhome-backup` on `.51`, CT 200 stopped on `.120`, CT 201 absent.
 >   - sysadmin README/continuity/queue updated; fleet dashboard watch item refreshed.
 
 > [2026-07-21 10:00 CEST] context-factory tick completed

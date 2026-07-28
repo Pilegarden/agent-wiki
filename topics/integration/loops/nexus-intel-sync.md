@@ -2,6 +2,7 @@
 
 **Topic:** integration
 **Agent:** nexus-integration
+**Job ID:** `da64be0fe62c`
 **Purpose:** Verify intel platform connectivity/auth-rotation and surface a findings-only summary.
 **Schedule:** daily `0 8 * * *`
 **Deliver:** local
