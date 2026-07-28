@@ -1,0 +1,7 @@
+name: nexus-integration
+model: deepseek-v4-flash
+provider: deepseek
+watch:
+  paths:
+    - /home/hermes/.hermes/wiki/topics/integration
+notify: wiki

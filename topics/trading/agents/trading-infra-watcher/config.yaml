@@ -1,0 +1,6 @@
+name: trading-infra-watcher
+model: stepfun/step-3.7-flash:free
+watch:
+  paths:
+    - /srv/trading
+notify: wiki

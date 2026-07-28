@@ -1,0 +1,6 @@
+name: trading-watcher
+model: deepseek-v4-flash
+provider: deepseek
+toolsets:
+  - read-only
+notify: wiki
